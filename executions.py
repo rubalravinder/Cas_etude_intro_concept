@@ -5,7 +5,10 @@ from serpent import *
 #creation d'une instance et print de ses attributs
 chat=Animal(5,50)
 print(chat.get_poids())
-chat.set_poids(45)
+try :
+    chat.set_poids(-45)
+except ValueError:
+    print("échoué")
 print(chat.get_poids())
 
 

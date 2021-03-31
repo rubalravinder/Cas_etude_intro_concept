@@ -3,7 +3,7 @@
 
 class Animal:
     def __init__(self,poids,taille):
-        self.__poids=poids #ici on protège poids
+        self.set_poids(poids) #ici on protège poids
         self.taille=taille
 
     def se_deplacer(self):
@@ -11,14 +11,15 @@ class Animal:
     
     #getter
     def get_poids(self):
-        if self.__poids>0:
             return self.__poids
-        else:
-            raise ValueError("le poids doit être positif!")
+
     
     #setter
     def set_poids(self,poids):
-        self.__poids=poids
+        if poids>0:
+            self.__poids=poids
+        else:
+            raise ValueError("le poids doit être positif!")
     
     # retourner un str définissant l'objet au cas où on se sait plus ce que c'est par exemple
     def __str__(self):
