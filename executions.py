@@ -1,6 +1,7 @@
 from animals import *
 from oiseau import *
 from serpent import *
+from zoo import *
 
 #creation d'une instance et print de ses attributs
 chat=Animal(5,50)
